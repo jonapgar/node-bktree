@@ -3,7 +3,7 @@
   "author": "Jonah H. Harris <jonah.harris@gmail.com> (http://www.jonahharris.com/)",
   "description": "A JavaScript implementation of a Burkhard-Keller Tree (BK-Tree)",
   "license": "MIT",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "repository": {
     "url": "https://github.com/tjbaron/node-bktree"
   },
