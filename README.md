@@ -63,9 +63,14 @@ var r = tree.query('refered', 3, 1);
 
 - transposition - Uses Damerau–Levenshtein algorithm instead of the Levenshtein algorithm.
 - details - Returns matching terms and their distance (rather than just the terms).
+- path - If each term is a object, and the string to compare is a member of that object.
 
 For example:
 
 ```
-var tree = new bktree(terms, {transposition: true, details: true});
+var terms = [
+  {word: 'accommodate'},
+  {word: 'accommodation'}
+];
+var tree = new bktree(terms, {transposition: true, details: true, path: 'word'});
 ```
