@@ -59,6 +59,13 @@ var r = tree.query('refered', 3, 1);
 // [ 'referred' ]
 ```
 
-To do comparisons using the Damerau–Levenshtein algorithm instead of the Levenshtein algorithm enable transposition:
+`bktree` can be passed the following options in a second parameters:
 
-  var tree = new bktree(terms, {transposition: true});
+- transposition - Uses Damerau–Levenshtein algorithm instead of the Levenshtein algorithm.
+- details - Returns matching terms and their distance (rather than just the terms).
+
+For example:
+
+```
+var tree = new bktree(terms, {transposition: true, details: true});
+```
