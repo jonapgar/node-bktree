@@ -1,21 +1,19 @@
-node-bktree
+Damerau-Levenshtein BK Tree
 ===========
 
-A JavaScript implementation of a Burkhard-Keller Tree (BK-Tree)
+A JavaScript implementation of a Burkhard-Keller Tree (BK-Tree) that uses either the Levenshtein or Damerau-Levenshtein algorithm to calculate the distance between strings.
 
 Install
 -------
 
-    npm install bktree
+    npm install bktree-damlev
 
 Usage
 -----
 
-An example of using the tree:
+A basic example without passing any options. By default the Levenshtein algorithm is used:
 
 ```javascript
-// Burkhard-Keller Tree (BK-Tree) Example
-// Jonah H. Harris <jonah.harris@gmail.com>
 var bktree = require('bktree');
 var terms = [
   'accommodate', 'accommodation', 'achieve', 'across',
@@ -74,3 +72,10 @@ var terms = [
 ];
 var tree = new bktree(terms, {transposition: true, details: true, path: 'word'});
 ```
+
+Credits
+-------
+
+Based on [node-bktree](https://github.com/jonahharris/node-bktree) by Jonah H. Harris.
+
+Changes by Thomas Baron.
